@@ -12,3 +12,7 @@ output.elasticsearch:
 
 setup.kibana:
   host: "http://kibana:5601"
+
+# Template setup (required if you change the index name)
+setup.template.name: "api-logs"
+setup.template.pattern: "api-logs-*"
