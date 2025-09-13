@@ -34,7 +34,7 @@ services:
     container_name: filebeat
     user: root
     volumes:
-      - ./logs:/usr/share/filebeat/logs:ro       # same host logs folder
+      - ./logs:/usr/share/filebeat/logs      # same host logs folder
       - ./filebeat.yml:/usr/share/filebeat/filebeat.yml:ro
     networks:
       - elk_net
