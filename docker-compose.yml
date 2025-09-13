@@ -35,6 +35,7 @@ services:
     user: root
     volumes:
       - ./logs:/usr/share/filebeat/logs      # same host logs folder
+      - app-logs:/app-logs:ro
       - ./filebeat.yml:/usr/share/filebeat/filebeat.yml:ro
     networks:
       - elk_net
@@ -44,6 +45,8 @@ services:
 
 volumes:
   es_data:
+  app-logs:
+    external: true
 
 networks:
   elk_net:
